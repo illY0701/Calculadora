@@ -26,7 +26,6 @@ export default function Triangulo() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Triângulo</Text>
 
       <View style={styles.card}>
         <Text style={styles.subtitle}>Fórmulas:</Text>

@@ -17,8 +17,6 @@ export default function Quadrado() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Quadrado</Text>
-
       <View style={styles.card}>
         <Text style={styles.subtitle}>Fórmulas:</Text>
         <Text>Área = lado²</Text>
