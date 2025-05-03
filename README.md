@@ -1,20 +1,36 @@
-# Expo Router Example
 
-Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
+# 📐 Calculadora Geométrica
 
-## 🚀 How to use
+Aplicativo desenvolvido com **React Native** e **Expo** para calcular **área e perímetro** de diferentes formas geométricas.  
+Você pode selecionar uma forma, preencher os campos e ver os resultados com base nas fórmulas matemáticas.
 
-```sh
-npx create-expo-app -e with-router
-```
+---
 
-## Deploy
+## 📱 Telas do Aplicativo
 
-Deploy on all platforms with Expo Application Services (EAS).
+### 🏠 Tela Inicial
+- Exibe o nome do app: **Calculadora Geométrica**
+- Botão para acessar a seleção de formas
 
-- Deploy the website: `npx eas-cli deploy` — [Learn more](https://docs.expo.dev/eas/hosting/get-started/)
-- Deploy on iOS and Android using: `npx eas-cli build` — [Learn more](https://expo.dev/eas)
+### 🔷 Tela de Seleção de Formas
+- Quadrado
+- Retângulo
+- Triângulo
+- Círculo  
+*(Clique em uma das formas para ir até a tela de cálculo)*
 
-## 📝 Notes
+### 🧮 Tela de Cálculo
+- Exibe a fórmula matemática da área e perímetro
+- Campos de entrada (como lado, base, altura, raio, etc.)
+- Botão de calcular
+- Exibição dos resultados abaixo
 
-- [Expo Router: Docs](https://docs.expo.dev/router/introduction/)
+---
+
+## Atividade feita por Anna Isabelle de Souza Santos e César Rodrigues Ribeiro. DSM 5º
+---
+
+## Observações
+- Antes de realizar o projeto instale as dependências com "npm install"
+
+
