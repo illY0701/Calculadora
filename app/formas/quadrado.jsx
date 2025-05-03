@@ -7,12 +7,10 @@ export default function Quadrado() {
 
   const calcular = () => {
     const l = parseFloat(lado);
-    
     if (!isNaN(l)) {
       setResultado({
         area: (l * l).toFixed(2),
-        perimetro: (4 * l).toFixed(2),
-        diagonal: (l * Math.sqrt(2)).toFixed(2)
+        perimetro: (4 * l).toFixed(2)
       });
     }
   };
@@ -20,12 +18,11 @@ export default function Quadrado() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Quadrado</Text>
-      
+
       <View style={styles.card}>
-        <Text style={styles.subtitle}>Propriedades</Text>
-        <Text>- Todos os lados são iguais</Text>
-        <Text>- Todos os ângulos são 90 graus</Text>
-        <Text>- Diagonais se cruzam no centro</Text>
+        <Text style={styles.subtitle}>Fórmulas:</Text>
+        <Text>Área = lado²</Text>
+        <Text>Perímetro = 4 × lado</Text>
       </View>
 
       <TextInput
@@ -45,7 +42,6 @@ export default function Quadrado() {
           <Text style={styles.resultTitle}>Resultados:</Text>
           <Text>Área: {resultado.area}</Text>
           <Text>Perímetro: {resultado.perimetro}</Text>
-          <Text>Diagonal: {resultado.diagonal}</Text>
         </View>
       )}
     </View>
@@ -56,7 +52,7 @@ const styles = {
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#faf2fc'
   },
   title: {
     fontSize: 22,

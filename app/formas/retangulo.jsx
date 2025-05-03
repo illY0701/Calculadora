@@ -1,21 +1,21 @@
-// App/formas/retangulo.jsx
+
 import { useState } from 'react';
 import { View, Text, TextInput, Pressable } from 'react-native';
 
 export default function Retangulo() {
-  const [a, setA] = useState('');
-  const [b, setB] = useState('');
+  const [base, setBase] = useState('');
+  const [altura, setAltura] = useState('');
   const [resultado, setResultado] = useState(null);
 
   const calcular = () => {
-    const ladoA = parseFloat(a);
-    const ladoB = parseFloat(b);
+    const b = parseFloat(base);
+    const h = parseFloat(altura);
     
-    if (!isNaN(ladoA) && !isNaN(ladoB)) {
+    if (!isNaN(b) && !isNaN(h)) {
       setResultado({
-        area: (ladoA * ladoB).toFixed(2),
-        perimetro: (2 * (ladoA + ladoB)).toFixed(2),
-        diagonal: Math.sqrt(ladoA**2 + ladoB**2).toFixed(2)
+        area: (b * h).toFixed(2),
+        perimetro: (2 * (b + h)).toFixed(2),
+        diagonal: Math.sqrt(b**2 + h**2).toFixed(2)
       });
     }
   };
@@ -23,28 +23,28 @@ export default function Retangulo() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Retângulo</Text>
-      
+
       <View style={styles.card}>
-        <Text style={styles.subtitle}>Propriedades</Text>
-        <Text>- Lados opostos são iguais</Text>
-        <Text>- Todos os ângulos são 90 graus</Text>
-        <Text>- Diagonais são iguais</Text>
+        <Text style={styles.subtitle}>Fórmulas:</Text>
+        <Text>Área = base × altura</Text>
+        <Text>Perímetro = 2 × (base + altura)</Text>
+        <Text>Diagonal = √(base² + altura²)</Text>
       </View>
 
       <TextInput
-        placeholder="Lado (a)"
+        placeholder="Base"
         style={styles.input}
         keyboardType="numeric"
-        value={a}
-        onChangeText={setA}
+        value={base}
+        onChangeText={setBase}
       />
 
       <TextInput
-        placeholder="Lado (b)"
+        placeholder="Altura"
         style={styles.input}
         keyboardType="numeric"
-        value={b}
-        onChangeText={setB}
+        value={altura}
+        onChangeText={setAltura}
       />
 
       <Pressable style={styles.button} onPress={calcular}>
@@ -67,7 +67,7 @@ const styles = {
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#faf2fc'
   },
   title: {
     fontSize: 22,

@@ -1,33 +1,14 @@
-// App/index.jsx (Home)
 import { View, Text, Pressable } from 'react-native';
 import { Link } from 'expo-router';
 
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Calculadora Geométrica</Text>
+      <Text style={styles.titulo}>Calculadora Geométrica</Text>
       
-      <Link href="/formas/triangulo" asChild>
-        <Pressable style={styles.menuItem}>
-          <Text>Triângulo</Text>
-        </Pressable>
-      </Link>
-
-      <Link href="/formas/quadrado" asChild>
-        <Pressable style={styles.menuItem}>
-          <Text>Quadrado</Text>
-        </Pressable>
-      </Link>
-
-      <Link href="/formas/retangulo" asChild>
-        <Pressable style={styles.menuItem}>
-          <Text>Retângulo</Text>
-        </Pressable>
-      </Link>
-
-      <Link href="/formas/circulo" asChild>
-        <Pressable style={styles.menuItem}>
-          <Text>Circulo</Text>
+      <Link href="/formas" asChild>
+        <Pressable style={styles.botao}>
+          <Text style={styles.textoBotao}>Acessar Calculadora</Text>
         </Pressable>
       </Link>
     </View>
@@ -37,20 +18,26 @@ export default function Home() {
 const styles = {
   container: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     padding: 20,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#faf2fc'
   },
-  title: {
-    fontSize: 24,
+  titulo: {
+    fontSize: 28,
     fontWeight: 'bold',
-    marginVertical: 20,
-    textAlign: 'center'
+    marginBottom: 40,
+    color: '#1a237e'
   },
-  menuItem: {
-    backgroundColor: 'white',
+  botao: {
+    backgroundColor: '#b98dc9',
     padding: 15,
-    marginVertical: 8,
-    borderRadius: 8,
-    elevation: 2
+    borderRadius: 10,
+    elevation: 3
+  },
+  textoBotao: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: '500'
   }
 };

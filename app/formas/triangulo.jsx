@@ -15,13 +15,11 @@ export default function Triangulo() {
     const l1 = parseFloat(lado1);
     const l2 = parseFloat(lado2);
     const l3 = parseFloat(lado3);
-    
+
     if (!isNaN(b) && !isNaN(h)) {
       setResultado({
         area: ((b * h) / 2).toFixed(2),
-        perimetro: (!isNaN(l1) && !isNaN(l2) && !isNaN(l3)) 
-          ? (l1 + l2 + l3).toFixed(2) 
-          : 'Insira os 3 lados'
+        perimetro: (!isNaN(l1) && !isNaN(l2) && !isNaN(l3)) ? (l1 + l2 + l3).toFixed(2) : 'Inválido'
       });
     }
   };
@@ -29,11 +27,11 @@ export default function Triangulo() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Triângulo</Text>
-      
+
       <View style={styles.card}>
-        <Text style={styles.subtitle}>Propriedades</Text>
-        <Text>- Soma dos ângulos internos igual a 180°</Text>
-        <Text>- Tipos variados (equilátero, isósceles, escaleno)</Text>
+        <Text style={styles.subtitle}>Fórmulas:</Text>
+        <Text>Área = (base × altura) / 2</Text>
+        <Text>Perímetro = soma dos lados</Text>
       </View>
 
       <TextInput
@@ -52,8 +50,6 @@ export default function Triangulo() {
         onChangeText={setAltura}
       />
 
-      <Text style={styles.subtitle}>Lados para perímetro:</Text>
-      
       <View style={styles.row}>
         <TextInput
           placeholder="Lado 1"
@@ -97,7 +93,7 @@ const styles = {
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#faf2fc'
   },
   title: {
     fontSize: 22,

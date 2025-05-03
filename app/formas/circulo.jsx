@@ -7,11 +7,10 @@ export default function Circulo() {
 
   const calcular = () => {
     const r = parseFloat(raio);
-    
     if (!isNaN(r)) {
       setResultado({
         area: (Math.PI * r * r).toFixed(2),
-        circunferencia: (2 * Math.PI * r).toFixed(2)
+        perimetro: (2 * Math.PI * r).toFixed(2)
       });
     }
   };
@@ -19,12 +18,11 @@ export default function Circulo() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Círculo</Text>
-      
+
       <View style={styles.card}>
-        <Text style={styles.subtitle}>Propriedades</Text>
-        <Text>- Todos os pontos equidistantes do centro</Text>
-        <Text>- Forma perfeitamente redonda</Text>
-        <Text>- Sem vértices ou cantos</Text>
+        <Text style={styles.subtitle}>Fórmulas:</Text>
+        <Text>Área = π × raio²</Text>
+        <Text>Perímetro = 2 × π × raio</Text>
       </View>
 
       <TextInput
@@ -43,7 +41,7 @@ export default function Circulo() {
         <View style={styles.resultContainer}>
           <Text style={styles.resultTitle}>Resultados:</Text>
           <Text>Área: {resultado.area}</Text>
-          <Text>Circunferência: {resultado.circunferencia}</Text>
+          <Text>Perímetro: {resultado.perimetro}</Text>
         </View>
       )}
     </View>
@@ -55,7 +53,7 @@ const styles = {
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#faf2fc'
   },
   title: {
     fontSize: 22,
